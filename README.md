@@ -10,6 +10,8 @@ armez vous de CMake, installez les dépendances nécessaires et lancez la compil
 `make install` après la compilation du moteur. (Si vous ne voulez pas compiler vous même le moteur vous pouvez toujours mettre
 les binaires qui sont dans `Bins/Linux64/` dans votre `/usr/lib`)
 
+[Expansion Game Engine](https://github.com/Moi78/ExpansionGameEngine/) 
+
 Après vous devrez compiler le projet, encore avec CMake, vous n'aurez pas de dépendances à installer. Après il faudra simplement éxécuter le script
 `pack_game.sh` pour qu'il récupère les assets et les binaires fraichement compilés dans un dossier. Après ça, vous pouvez éxécuter le programme ^^
 (Il est possible d'en faire un alias et de pouvoir l'éxécuter de n'importe où :eyes:)
