@@ -6,6 +6,7 @@ Character::Character(EXP_Game* game) : EXP_Actor(game, vec3f(-0.2f, 0.0f, 0.5f),
 	LinkComponent(m_cam);
 
 	m_move = new EXP_KeyboardCallback(game, CL_VDFUNCPTR(Character::MoveForward), GLFW_KEY_W);
+	m_move_back = new EXP_KeyboardCallback(game, CL_VDFUNCPTR(Character::MoveBackward), GLFW_KEY_S);
 }
 
 Character::~Character() {
@@ -32,4 +33,8 @@ void Character::Tick() {
 void Character::MoveForward() {
 	AddWorldPos(m_cam->GetForwardVector() * 0.1f);
 	//m_bound->AddMovementInput(m_cam->GetForwardVector() * vec3f(1.0f, 1.0f, 0.0f), 10.0f);
+}
+
+void Character::MoveBackward() {
+	AddWorldPos(m_cam->GetForwardVector() * -0.1f);
 }
